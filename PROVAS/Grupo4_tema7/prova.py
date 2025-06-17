@@ -4,14 +4,18 @@ cancelar e listar consultas. Também pode validar conflitos de horários e permi
 paciente."""
 #joão Emanoel e Elisangela
 
-
-
 #Criando a class do pacientes e seus atributos
 class Paciente:
     def __init__(self,nome, idade, rg):
         self.nome = nome 
         self.idade = idade
         self.rg = rg
+
+#medico: medico colocamos um def para colocar suas informação e seu crm colocar como protegido.
+class medico:
+    def __init__(self, nome, crm):
+        self.nome = nome
+        self.crm = crm
         
 #validado servira para validar se o usuario digitou um seu rg.
     def validado(self,cpf):
@@ -25,11 +29,6 @@ class Paciente:
 class Agendamento:
     def __init__(self,):
         self.paciente = []
-  
-#medico: medico colocamos um def para colocar suas informação e seu crm colocar como protegido.
-    def medico(self, nome, crm):
-        self.nome = nome 
-        self.crm = crm 
 
 #Data serve para cadastrar as horas, o dia e mes
     def data(self, horas, dia, mes):
